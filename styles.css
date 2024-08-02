@@ -1,0 +1,19 @@
+/* No Framework Was Used. It's Pure HTML, CSS, and JS */
+/* Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "Raleway", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+/* End of Default Styles */
+
+/* Container */
+
+/* End of Container */

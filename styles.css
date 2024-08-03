@@ -498,4 +498,119 @@ html {
 }
 /* End of Services */
 
+/* Portfolio */
+.portfolio {
+    width: 100%;
+    height: 100%;
+    padding: 20rem 0 5rem 0;
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 20rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5rem);
+    transition: all 1s;
+}
+
+.change .portfolio-header {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.portfolio-header h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #777;
+    letter-spacing: 0.3rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio-header h1 {
+    font-size: 5rem;
+    color: #fff;
+    letter-spacing: 0.3rem;
+    margin-bottom: 12rem;
+}
+
+.works {
+    width: 80%;
+    margin: auto;
+}
+
+.work {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10rem);
+}
+
+.work:nth-child(1) {
+    transition: all 1s 0.5s;
+}
+
+.work:nth-child(2) {
+    transition: all 1s 1s;
+}
+
+.work:nth-child(3) {
+    transition: all 1s 2s;
+}
+
+.work:nth-child(4) {
+    transition: all 1s 3s;
+}
+
+.change .work {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.work img {
+    width: 40%;
+    height: 30rem;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.work-info {
+    width: 40%;
+}
+
+.work-info h3 {
+    font-size: 1.6rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.work-info h1 {
+    font-family: "Kanit", sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.2rem;
+    margin: 3rem 0;
+}
+
+.work-info p {
+    font-size: 1.6rem;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.work-info a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #c03740;
+    letter-spacing: 0.1rem;
+}
+/* End of Portfolio */
+
 /* End of Container */

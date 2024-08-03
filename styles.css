@@ -15,5 +15,401 @@ html {
 /* End of Default Styles */
 
 /* Container */
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    position: relative;
+}
+
+.rectangle {
+    width: 70rem;
+    height: 40rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+}
+
+.rectangle-1 {
+    top: 48%;
+    left: -21%;
+    transform: rotateZ(20deg);
+}
+
+.rectangle-2 {
+    top: -8%;
+    right: -10%;
+    transform: rotateZ(60deg);
+}
+
+
+/* Navigation */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    z-index: 100;
+}
+
+.designer {
+    position: absolute;
+    top: 2rem;
+    left: 30rem;
+    display: flex;
+    align-items: center;
+}
+
+.designer div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 2rem;
+}
+
+.designer img {
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.designer div span:nth-child(1) {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.2rem;
+}
+
+.designer div span:nth-child(2) {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #999;
+    letter-spacing: 0.1rem;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 3rem;
+    right: 30rem;
+    width: 5rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.menu-icon:hover {
+    transform: scaleY(1.4);
+}
+
+.line {
+    width: 100%;
+    height: 0.2rem;
+    background-color: #fff;
+}
+
+.navigation {
+    width: 100%;
+    height: 100vh;
+    background-color: #121212;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.navigation.navigate {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-left {
+    width: 30%;
+    height: 100%;
+}
+
+.nav-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.nav-right {
+    width: 70%;
+    height: 100%;
+}
+
+.x-btn {
+    width: 4rem;
+    height: 4rem;
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    cursor: pointer;
+}
+
+.x-line {
+    width: 4rem;
+    height: 0.2rem;
+    background-color: #fff;
+}
+
+.x-line-1 {
+    transform: rotateZ(-45deg);
+}
+
+.x-line-2 {
+    transform: rotateZ(45deg)translate(-0.2rem, -0.1rem);
+}
+
+.nav-right h1 {
+    font-family: "Kanit", sans-serif;
+    font-size: 5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+.nav-list a {
+    font-family: "Kanit", sans-serif;
+    font-size: 4rem;
+    color: #ccc;
+    margin: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+.nav-list a:nth-child(1) {
+    color: #c03740;
+}
+
+.nav-list a:hover {
+    color: #c03740;
+}
+/* End of Navigation */
+
+/* Banner */
+.landing {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.banner {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 40rem;
+    text-align: center;
+}
+
+.heading-slide {
+    position: absolute;
+    width: 100%;
+    transform: translateZ(-8rem);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.heading-slide-1 {
+    animation: animateHeading 8s infinite linear;
+}
+
+.heading-slide-2 {
+    animation: animateHeading 8s 4s infinite linear;
+}
+
+@keyframes animateHeading {
+    0% {
+        transform: translateZ(-8rem);
+        opacity: 0;
+        visibility: hidden; 
+    }
+
+    8% {
+        transform: translateZ(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    48% {
+        transform: translateZ(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    56% {
+        transform: translateZ(-8rem);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        transform: translateZ(-8rem);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.heading-slide h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #999;
+    letter-spacing: 0.3rem;
+    margin-bottom: 2rem;
+}
+
+.heading-slide h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.5rem;
+}
+/* End of Banner */
+
+/* About */
+.about {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 10rem;
+}
+
+.about-left {
+    width: 40%;
+    position: relative;
+}
+
+.about-left img {
+    width: 33rem;
+    height: 55rem;
+    object-fit: cover;
+    position: absolute;
+    top: -10rem;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20rem);
+    transition: all 1s 0.5s;
+}
+
+.change .about-left img {
+    opacity: 0.8;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.about-right {
+    width: 60%;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20rem);
+    transition: all 1.5s;
+}
+
+.change .about-right {
+    opacity: 0.8;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.about-right h1 {
+    font-family: "Kanit", sans-serif;
+    font-size: 20rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: #222;
+    position: absolute;
+    top: -20rem;
+    left: 15rem;
+}
+
+.about-right h3 {
+    font-family: "Kanit", sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    color: #fff;
+    position: absolute;
+    top: -7rem;
+    left: 25rem;
+}
+
+.info {
+    position: absolute;
+    top: 5rem;
+    left: 25rem;
+}
+
+.info p {
+    font-family: "Kanit", sans-serif;
+    font-size: 1.8rem;
+    width: 45rem;
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 5rem;
+}
+
+.social-media {
+    display: flex;
+    margin-bottom: 5rem;
+}
+
+.social-media i {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    margin-right: 2rem;
+    color: #c03740;
+    cursor: pointer;
+}
+
+.info h4 {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.info span {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #777;
+    display: block;
+    margin: 2rem 0;
+}
+
+.info a {
+    font-family: "Kanit", sans-serif;
+    color: #c03740;
+}
+/* End of About */
 
 /* End of Container */

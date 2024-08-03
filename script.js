@@ -13,12 +13,17 @@ xBtn.addEventListener("click", () => {
 
 window.addEventListener("scroll", () => {
     const about = document.querySelector(".about");
-    
+    const services = document.querySelector(".services");
+
     if (window.scrollY >= 200) {
         about.classList.add("change");
       } else {
         about.classList.remove("change");
       }
 
-      console.log(window.scrollY);
+      if (window.scrollY >= about.offsetTop + 200) {
+        services.classList.add("change");
+      } else {
+        services.classList.remove("change");
+      }
 });
